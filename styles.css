@@ -1,0 +1,102 @@
+/* Reset some default styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+header {
+  background-color: #004080;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: #cce6ff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+nav a:focus,
+nav a:hover {
+  color: #ffcc00;
+  outline: 2px solid #ffcc00;
+  outline-offset: 2px;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  margin-top: 0;
+  color: #004080;
+}
+
+section img {
+  display: block;
+  margin: 1rem auto 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #004080;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* High contrast for accessibility */
+@media (prefers-contrast: more) {
+  body {
+    background-color: #000;
+    color: #fff;
+  }
+  header, footer {
+    background-color: #000080;
+  }
+  nav a {
+    color: #ffff00;
+  }
+  nav a:focus,
+  nav a:hover {
+    color: #ff0;
+    outline-color: #ff0;
+  }
+}
